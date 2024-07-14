@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/API-mentor/static/css/main.9ba85107.css",
+    "main.js": "/API-mentor/static/js/main.6fecd167.js",
+    "static/js/453.d3fb8a41.chunk.js": "/API-mentor/static/js/453.d3fb8a41.chunk.js",
+    "index.html": "/API-mentor/index.html",
+    "main.9ba85107.css.map": "/API-mentor/static/css/main.9ba85107.css.map",
+    "main.6fecd167.js.map": "/API-mentor/static/js/main.6fecd167.js.map",
+    "453.d3fb8a41.chunk.js.map": "/API-mentor/static/js/453.d3fb8a41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ba85107.css",
+    "static/js/main.6fecd167.js"
+  ]
+}
