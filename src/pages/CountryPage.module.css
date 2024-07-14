@@ -1,0 +1,79 @@
+[data-theme="light"]:root{
+    --text-color: hsl(200, 15%, 8%);
+    --background-color: hsl(0, 0%, 98%);
+    --elements-color: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 52%);
+  }
+  [data-theme="dark"]{
+    --text-color: hsl(0, 0%, 100%);
+    --background-color: hsl(207, 26%, 17%);
+    --elements-color: hsl(209, 23%, 22%);
+    --input-color: hsl(0, 0%, 52%);
+  }
+.countryPage{
+    background-color: var(--background-color);
+}
+.container{
+    padding: 0 4rem;
+}
+.backLink{
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    width: 0;
+    margin-bottom: 3rem;
+}
+.back{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0;
+    color: var(--text-color);
+    background-color: var(--elements-color);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+.flag{
+    width: 100%;
+    max-width: 45%;
+    object-fit: contain;
+}
+.infoContainer{
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+.country{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.borders{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.borderButton{
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    border: 0;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px gray;
+    box-shadow: none;
+
+}
+.h1{
+    margin: 0 0 0.5rem 0;
+}
+.bold{
+    font-weight: 700;
+}

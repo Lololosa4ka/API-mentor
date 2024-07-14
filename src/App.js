@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { React, useState, useEffect } from 'react';
+import HomePage from './pages/Home';
+import CountryPage from './pages/CountryPage';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const getApiData = async () => {
+      const response = await fetch(
+        "https://restcountries.com/v3.1/all?fields=name,flags,population,capital,region"
+      ).then((response) => response.json());
+      setData(response);
+    }
+    getApiData();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+          <Route path='/' element={<HomePage data={data}/>} />
+          {data.map(country =>{
+            return <Route path={`/${country.name.common}`} element={<CountryPage country={country.name.common} />} />
+          })}
+        </Routes>
+    </Router>
   );
 }
 
