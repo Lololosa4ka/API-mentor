@@ -1,6 +1,6 @@
-[data-theme="light"]:root{
+[data-theme="light"]{
   --text-color: hsl(200, 15%, 8%);
-  --background-color: hsl(0, 0%, 98%);
+  --background-color: #F6F6F6;
   --elements-color: hsl(0, 0%, 100%);
   --input-color: hsl(0, 0%, 52%);
 }
@@ -74,13 +74,17 @@ svg{
   padding: 0.75rem;
   box-sizing: border-box;
 }
+.filter{
+  appearance: none;
+}
 .filter-select{
   border: none;
-  background-color: transparent;
+  background-color: var(--elements-color);
   font-size: 1rem;
   padding: 0.75rem;
   color: var(--text-color);
 }
+
 
 .search-icon{
   padding-right: 1.5rem;
@@ -97,11 +101,11 @@ svg{
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
+  
 }
 .country{
   background-color: var(--elements-color);
   width: 20rem;
-  box-shadow: black 0px 0px 5px;
   border-radius: 0.3125rem;
 }
 
@@ -110,6 +114,8 @@ svg{
   overflow: hidden;
   aspect-ratio: 5 / 3;
   width: 20rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
 }
 .flag {
   position: absolute;
@@ -122,4 +128,40 @@ svg{
 }
 .info{
   padding-left: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .header, .taskbar{
+    padding: 0 10px;
+  }
+  .countries{
+    padding: 0 60px;
+  }
+  .page-title, .dark-mode{
+    font-size: 14px;
+  }
+  .moon{
+    width: 14px;
+  }
+  .country, .flag-box{
+    width: 100%;
+  }
+
+
+  .taskbar{
+    flex-direction: column;
+  }
+  .filter-select{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    margin-right: 1rem;
+  }
+  .search{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .filter{
+    width: 60%;
+    margin-bottom: 2rem;
+  }
 }
